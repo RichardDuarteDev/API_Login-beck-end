@@ -535,3 +535,4 @@ C:\Users\Sora\Documents\GIT\API_Login-beck-end\UsuariosAPI\obj\Debug\net7.0\refi
 C:\Users\Sora\Documents\GIT\API_Login-beck-end\UsuariosAPI\obj\Debug\net7.0\UsuariosAPI.pdb
 C:\Users\Sora\Documents\GIT\API_Login-beck-end\UsuariosAPI\obj\Debug\net7.0\UsuariosAPI.genruntimeconfig.cache
 C:\Users\Sora\Documents\GIT\API_Login-beck-end\UsuariosAPI\obj\Debug\net7.0\ref\UsuariosAPI.dll
+C:\Users\Sora\Documents\GIT\API_Login-beck-end\UsuariosAPI\obj\Debug\net7.0\UsuariosAPI.sourcelink.json

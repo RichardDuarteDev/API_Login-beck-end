@@ -93,15 +93,43 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddScoped<UsuarioService>();
 builder.Services.AddScoped<TokenService>();
 
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowFrontend",
+//        policy => policy
+//            .WithOrigins(
+//            "http://localhost:5500", 
+//            "http://127.0.0.1:5500", 
+//            "http://127.0.0.1:5500/") // ajuste para o endereço do seu front
+//            .AllowAnyHeader()
+//            .AllowAnyMethod()
+//    );
+//});
+
+// CORS PARA LIBERAR ROTAS DE ACESSO DE DESTINO
+// NECESSÁRIO SEMPRE QUE ADICIONAR UMA NOVA ROTA NO CORS
+// É NECESSÁRIO ADD A PORTA DA INTEGRAÇÃO AQUI 
+// GERALMENTE USA HTTPS PARA CERTIFICADO SSL  / SEM CERTIFICADO PODE USAR HTTP 
+// CASO A APLICAÇÃO NECESSITE DE HTTPS MESMO NECESSÁRIO UM CERTIFICADO SSL
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
         policy => policy
-            .WithOrigins("http://localhost:5500", "http://127.0.0.1:5500") // ajuste para o endereço do seu front
+            .WithOrigins(
+                "http://localhost:5500",
+                "http://127.0.0.1:5500",
+                "https://localhost:5500",
+                "https://127.0.0.1:5500",
+                "http://127.0.0.1:5502",
+                "http://127.0.0.1:5501",
+                "http://127.0.0.1:5502/index.html"
+            )
             .AllowAnyHeader()
             .AllowAnyMethod()
     );
 });
+
 
 WebApplication app = builder.Build();
 
